@@ -1,6 +1,7 @@
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {PageHeader, Gap, TextInput, Button} from '../../components';
+import LastTransactions from '../../components/molecules/Transactions';
 
 const CashOnHand = ({navigation}) => {
   return (
@@ -23,9 +24,7 @@ const CashOnHand = ({navigation}) => {
         </View>
       </View>
       <Gap height={24} />
-      <View style={styles.contentWrapper}>
-        <Text style={styles.text}>Last 3 Transactions</Text>
-      </View>
+      <LastTransactions />
     </ScrollView>
   );
 };
@@ -42,10 +41,5 @@ const styles = StyleSheet.create({
     height: 296,
     paddingHorizontal: 24,
     paddingTop: 13,
-  },
-  text: {
-    fontSize: 16,
-    fontFamily: 'Poppins-Bold',
-    color: '#000000',
   },
 });
